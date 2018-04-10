@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <title>MY PROFILE</title>
+ <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h4 id="profile_text">My Profile Page</h4>
+			<span id="t" onload="piece()" style="color:#075E54;">time</span>
+	</div>
+		<img id="image_center" src="images/jozy.jpg" width="200px" height="200px">
+			<div id="about_me">
+				<h4 id="about_text">About Me</h4>
+					<p class="note">
+					Hi, my name is Joshua i am currently a student
+					of the University of Uyo, Computer Education.
+					I love Computers and programming, i develop 
+					web applications and i can work in both the 
+					front-end and back-end.
+					</p>
+			</div>
+				<div id="footer">
+					<p>Social Media</p>
+						<div id="social_con">
+							<img class="image" src="images/facebook.png" width="60px" height="60px">
+							<img class="image" src="images/twitter.png" width="60px" height="60px">
+						</div>
+				</div>
+</div>
+<script type="text/javascript">
+function piece(){
+	var d = new Date();
+	var hours = d.getHours();
+	var mins = d.getMinutes();
+	var secs = d.getSeconds();
+	if( hours > 12 ){
+		  hours = hours - 12;
+	}
+	if( hours == 0){ 
+		  hours = 12;
+	}
+	var t = document.getElementById('t');
+	t.innerHTML =hours+":"+mins+":"+secs;
+}
+var t = setInterval(piece,10);
+</script>
+</body>
+</html>
